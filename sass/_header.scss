@@ -1,0 +1,76 @@
+.header {
+    background-color: $color-grey-dark-1;
+    grid-column: full-start / span 7;
+    font-family: Monoton;
+    background-image: linear-gradient(rgba($color-secondary, 0.75), rgba($color-secondary, 0.75)), url(/img/house-1.jpeg);
+    height: auto;
+    background-position: center;
+    background-size: cover;
+
+    padding: 2rem 8rem 8rem 8rem;
+
+    display: grid;
+    grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr;
+    grid-row-gap: 1.5rem;
+    justify-content: center;
+
+    grid-template-columns: minmax(min-content, max-content);
+
+    @media only screen and (max-width : $bp--medium) {
+        grid-column: 1/-1;
+    }
+
+    & img {
+        height: 11rem;
+        justify-self: center;
+
+    }
+
+    // & h3 {}
+
+    & h1 {
+        font-size: 4rem;
+        font-weight: 500;
+        color: aliceblue;
+        word-spacing: 10px;
+        font-family: Monoton;
+    }
+
+    &__btn {
+        align-self: self-start;
+        justify-self: self-start;
+    }
+
+    &__seenon-text {
+        font-size: 1.6rem;
+        font-family: cursive;
+        color: $color-grey-light-2;
+
+        display: grid;
+        grid-template-columns: 1fr max-content 1fr;
+        align-items: center;
+        grid-column-gap: 1.5rem;
+
+        &::before,
+        &::after {
+            content: "";
+            height: 1px;
+            display: block;
+            background-color: currentColor;
+        }
+    }
+
+    &__seenon-logos {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 3rem;
+        justify-items: center;
+        align-items: center;
+
+        & img {
+            max-height: 2.5rem;
+            max-width: 100%;
+            filter: brightness(50%);
+        }
+    }
+}

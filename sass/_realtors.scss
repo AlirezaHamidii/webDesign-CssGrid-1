@@ -1,0 +1,61 @@
+.realtours {
+    background-color: $color-secondary;
+    grid-column: col-start 7 / -1;
+
+    display: grid;
+    grid-template-columns: min-content;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    grid-row-gap: 5vh;
+    grid-column-gap: 2rem;
+
+    @media only screen and (max-width : $bp--medium) {
+        grid-column: 1/-1;
+        padding: 3rem 2rem;
+    }
+
+    &__logo {
+        width: 20rem;
+
+        @media only screen and (max-width : $bp--large) {
+            display: none;
+        }
+
+        @media only screen and (max-width : $bp--medium) {
+            display: none;
+        }
+    }
+
+    & h3 {
+        font-size: 1.7rem;
+        color: $color-primary-med;
+        // margin: 0 !important;
+
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: min-content max-content;
+        align-items: center;
+        grid-column-gap: 2rem;
+        grid-row-gap: 5vh;
+
+        @media only screen and (max-width : $bp--medium) {
+            grid-template-columns: repeat(3, min-content max-content);
+        }
+    }
+
+    &__detail {}
+
+    &__sold {
+        font-size: 1.3rem;
+        color: $color-grey-light-2;
+    }
+
+    &__image {
+        width: 7rem;
+        height: 7rem;
+        border-radius: 50%;
+    }
+}
